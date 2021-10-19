@@ -1,6 +1,7 @@
 @extends('layout.layout')
 
 @section('content')
+    <h1 class="mt-8 mb-4 text-center">Liste des célébrités</h1>
     <div class="accordion mt-8" id="accordionExample" style="width: 75%;margin-left: auto; margin-right: auto">
         @foreach($celebrities as $celebrity)
             <div class="accordion-item">
