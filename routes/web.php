@@ -14,4 +14,6 @@ use App\Http\Controllers\CelebrityController;
 |
 */
 
-Route::get('/', [CelebrityController::class, 'index']);
+Route::get('/', [CelebrityController::class, 'index'])->name('home');
+Route::get('/create', [CelebrityController::class, 'create'])->name('create');
+Route::post('/create', [CelebrityController::class, 'store'])->name('store');
