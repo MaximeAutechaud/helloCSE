@@ -5,7 +5,7 @@
 
     @if($errors->any)
         @foreach($errors->all() as $error)
-            <span>{{ $error }}</span><br>
+            <span style="color: red">{{ $error }}</span><br>
         @endforeach
     @endif
 
@@ -19,7 +19,7 @@
         <input type="text" name="image" id="image" class="form-control">
         <label for="description">Description</label>
         <textarea name="description" id="description" class="form-control"></textarea>
-        <button type="submit">Valider</button>
+        <button class="btn btn-success" type="submit">Valider</button>
     </form>
 
 @endsection
