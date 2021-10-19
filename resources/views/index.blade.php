@@ -11,15 +11,20 @@
                     {{ $celebrity->firstname . ' ' . $celebrity->lastname }}
                 </button>
             </h2>
-            <div id="{{$celebrity->firstname . $celebrity->lastname}}" class="accordion-collapse collapse"
+            <div id="{{$celebrity->firstname . $celebrity->lastname}}" class="accordion-collapse collapse flex"
                  aria-labelledby="headingTwo"
                  data-bs-parent="#accordionExample">
                 <img src="{{ $celebrity->image }}" style="width: 10%">
                 <div class="accordion-body">
                     {{ $celebrity->description }}
                     <div>
-                        <a href="{{ route('edit', ['id' => $celebrity->id]) }}">Editer</a>
-                        <a href="{{ route('delete', ['id' => $celebrity->id]) }}">Supprimer</a>
+                        <button class="btn btn-outlined-primary" type="button">
+                            <a href="{{ route('edit', ['id' => $celebrity->id]) }}" style="text-decoration: none">Editer</a>
+                        </button>
+                        <button class="btn btn-outlined-danger" type="button">
+                            <a href="{{ route('delete', ['id' => $celebrity->id]) }}"
+                               style="text-decoration:none">Supprimer</a>
+                        </button>
                     </div>
                 </div>
             </div>
