@@ -13,7 +13,7 @@ git clone
 Entrez dans le repo
 
 ```bash
-cd HelloCSE/
+cd helloCSE/
 ```
 
 Installez les dépendances
